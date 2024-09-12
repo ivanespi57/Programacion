@@ -6,7 +6,6 @@ public class dos {
 
         System.out.println("Adiós mundo");
        
-
     }
     
 
