@@ -4,7 +4,10 @@ public class dos {
 
     public static void main (String[] args){
 
-        System.out.println("Adiós mundo");
+        int a = 109;
+        a++;
+
+        System.out.println(a);
        
     }
     
