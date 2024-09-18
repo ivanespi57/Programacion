@@ -16,9 +16,6 @@ public class Ampliado4 {
         System.out.printf("Buenos dias, mi nombre es %s\n", nombre);
 
 
-
-
-
     }
 
 
