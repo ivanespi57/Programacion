@@ -10,8 +10,6 @@ public class Ampliado3 {
 
         System.out.printf("Radio: %.1f\nAltura: %.1f\nEl volumen del cilindro es %.7f\n", radio, altura, volumen);
 
-
-
     }
     
 }
