@@ -24,7 +24,6 @@ public class Ampliado1 {
 
         System.out.printf("Suma: %d \nResta: %d \nDivisión: %.2f\nMultiplicación: %d\n", suma, resta, div, prod);
 
-
-
+    
     }
 }
