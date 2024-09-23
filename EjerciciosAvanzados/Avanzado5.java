@@ -17,7 +17,6 @@ public class Avanzado5 {
         if (hue1 >= hue2){
             System.out.printf("Tarda %d minutos", tiempo);
         }else if (hue1 < hue2){
-            
 
         }
     }
