@@ -3,22 +3,28 @@ import java.util.Scanner;
 
 public class Avanzado5 {
     public static void main(String[] args) {
-        int hue1;
-        int hue2;
-        int tiempo = 10;
+        int cap;
+        int hue;
+        int tiempo;
+        int ollas;
+        
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Cuántos huevos caben en la cazuela: ");
-        hue1 = sc.nextInt();
-        System.out.println("Cuántos huevos quieres cocer: ");
-        hue2 = sc.nextInt();
+        System.out.print("Cuántos huevos caben en la cazuela: ");
+        cap = sc.nextInt();
+        System.out.print("Cuántos huevos quieres cocer: ");
+        hue = sc.nextInt();
 
-        if (hue1 >= hue2){
-            System.out.printf("Tarda %d minutos", tiempo);
-        }else if (hue1 < hue2){
+        ollas = hue / cap;
 
+        if (hue%cap > 0 ){
+            tiempo = (ollas + 1) * 10;
+        }else{
+            tiempo = 10;
         }
-    }
+        System.out.printf("Los huevos tardarán en cocerse %d minutos\n", tiempo);
+        }
+    
     
 }
