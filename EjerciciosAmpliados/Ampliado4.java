@@ -12,7 +12,7 @@ public class Ampliado4 {
         System.out.println("Cúal es tu nombre: ");
         
         nombre = sc.nextLine();
-
+        
         System.out.printf("Buenos dias, mi nombre es %s\n", nombre);
 
 
