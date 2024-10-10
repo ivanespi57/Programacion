@@ -11,7 +11,9 @@ public class secue6 {
         n = sc.nextInt();
         double resto = n % 10;
         int decena = (n/10) * 10;
-        //cpmpruebo si el número esta entre 1 y 100 
+        
+        //compruebo si el número esta entre 1 y 100 
+        
         if (n < 1 || n > 100){
             System.out.println("Número inválido");
         } 
