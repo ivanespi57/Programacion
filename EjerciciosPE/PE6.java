@@ -8,8 +8,9 @@ public class PE6 {
 
         int dia1, dia2;
         int hora1, hora2;
-        int horaT1, horaT2;
-        int horaTr = 1;
+        int horaT = 0;
+        String dia1s = "";
+        String dia2s = "";
 
         System.out.println("Introduce el primer dia (1-7): ");
         dia1 = sc.nextInt();
@@ -27,36 +28,39 @@ public class PE6 {
              (dia2 >= 1 && dia2 <= 7) && (hora2 >= 0 && hora2 <= 23)
              &&
              dia1>=dia2 || (dia1 == dia2 && hora1 <= hora2) ){
+                switch (dia1) {
+                case 1: dia1s = "lunes"; break;
+                case 2: dia1s = "martes"; break;
+                case 3: dia1s = "miércoles"; break;
+                case 4: dia1s = "jueves"; break;
+                case 5: dia1s = "viernes"; break;
+                case 6: dia1s = "sábado"; break;
+                case 7: dia1s = "domingo"; break;
+                default: dia1s = "Dia inválido"; break;
+               
+                }
+                switch (dia2) {
+                    case 1: dia2s = "lunes"; break;
+                    case 2: dia2s = "martes"; break;
+                    case 3: dia2s = "miércoles"; break;
+                    case 4: dia2s = "jueves"; break;
+                    case 5: dia2s = "viernes"; break;
+                    case 6: dia2s = "sábado"; break;
+                    case 7: dia2s = "domingo"; break;
+                    default: dia2s = "Dia inválido"; break;
+                   
+                }
 
+                horaT = ((dia1 - dia2) * 24) + (hora2 - hora1); 
+                 
+                System.out.printf("Entre las %d del %d y las %d del %d hay %d horas.",hora1, dia1, hora2, dia2, horaT);
                 
             }else{
                 System.out.println("Inválido");
             }
-            horaT1 = (dia1 - 1) * 24 + hora1; 
-            horaT2 = (dia2 - 1) * 24 + hora2; 
-            horaTr = horaT2 - horaT1;
-            System.out.println(horaTr);
-
-
-
-
-
-        /*switch (dia1) {
-            case 1:System.out.println("lunes"); break;
-            case 2:System.out.println("martes");break;
-            case 3:System.out.println("miércoles");break;
-            case 4:System.out.println("jueves");break;
-            case 5:System.out.println("viernes");break;
-            case 6:System.out.println("sabado");break;
-            case 7:System.out.println("domingo");break;
-                
-            default: System.out.println("Dia inválido");
-        }
-        switch (hora1) {
-            case 1:
-                
-                
-            default:
-          */      
-        }
+     
+               
+            
     }
+}
+    
