@@ -1,3 +1,4 @@
+package PE;
 
 import java.util.Scanner;
 

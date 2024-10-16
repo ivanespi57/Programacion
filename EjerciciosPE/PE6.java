@@ -9,8 +9,7 @@ public class PE6 {
         int dia1, dia2;
         int hora1, hora2;
         int horaT = 0;
-        String dia1s = "";
-        String dia2s = "";
+        
 
         System.out.println("Introduce el primer dia (1-7): ");
         dia1 = sc.nextInt();
@@ -22,7 +21,9 @@ public class PE6 {
         System.out.println("Introduce la segunda hora (0-23)");
         hora2 = sc.nextInt();
         System.out.println();
-
+        
+        String dia1s = "";
+        String dia2s = "";
         if ( (dia1 >= 1 && dia1 <= 7) && (hora1 >= 0 && hora1 <= 23) 
              &&
              (dia2 >= 1 && dia2 <= 7) && (hora2 >= 0 && hora2 <= 23)
@@ -53,13 +54,11 @@ public class PE6 {
 
                 horaT = ((dia1 - dia2) * 24) + (hora2 - hora1); 
                  
-                System.out.printf("Entre las %d del %d y las %d del %d hay %d horas.",hora1, dia1, hora2, dia2, horaT);
                 
-            }else{
-                System.out.println("Inválido");
+                
             }
-     
-               
+            
+            System.out.println("Entre las "+hora1+" del "+dia1s+" y las "+hora2+" del "+dia2s+" hay "+horaT+" horas.");
             
     }
 }
