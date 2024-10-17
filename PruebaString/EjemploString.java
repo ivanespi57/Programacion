@@ -5,6 +5,7 @@ public class EjemploString {
         
         System.out.printf("%s\n%d caracteres\n",s, s.length());
         System.out.println(s.charAt(5));
+        
     }
     
 }
