@@ -10,7 +10,7 @@ public class PE6 {
         int hora1, hora2;
         int horaT = 0;
         
-
+         
         System.out.println("Introduce el primer dia (1-7): ");
         dia1 = sc.nextInt();
         System.out.println("Introduce la primera hora (0-23)");
