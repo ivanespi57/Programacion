@@ -12,6 +12,7 @@ public class String1 {
         System.out.println(s.substring(7,s.length())); // De la posición 7 hasta el final, porque el lenght te pone uno más 
 
         System.out.println(s.indexOf("o")); // Busca la cadena o dentro del String y dice en que posición esta la primera 
+        
         System.out.println(s.equals("Hola"));
         if (s.equals("uno")){ // s == "uno" . Es como poner un ==, (este imprime false o true)
          
