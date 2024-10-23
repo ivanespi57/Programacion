@@ -1,33 +1,31 @@
-package PE;
-
 import java.util.Scanner;
 
-public class PE4 {
+public class pe4 {
     public static void main(String[] args) {
+        
         Scanner sc = new Scanner(System.in);
 
-        int n;
+        int num;
         int cont = 2;
-        int comp;
-        boolean primo = true;
+        int res;
+        boolean prim = true;
 
-        System.out.println("Introduce un número: ");
-        n = sc.nextInt();
-        
-        while (cont < n && primo){
-            comp = n % cont;
-            if (comp == 0){
-                primo = false;
+        System.out.print("Dime un número: ");
+        num = sc.nextInt();
+
+        while(cont < num && prim){
+            res = num % cont;
+
+            if(res == 0){
+                prim = false;
             }
             cont++;
-
         }
-        if (primo == true) {
+
+        if (prim){
             System.out.println("Es primo");
-        }else{
+        }else {
             System.out.println("No es primo");
         }
-        
-        
     }
 }
