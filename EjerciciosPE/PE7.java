@@ -8,12 +8,12 @@ public class PE7 {
 
         int puntosJ = 0;
         int puntosO = 0;
-        int tryMaq = (int)(Math.random()*3+1);
+        int tryMaq;
         int tryYo;
         
         do{
             
-
+            tryMaq = (int)(Math.random()*3+1);
             System.out.println("Selecciona una opción: ");
             System.out.println("1- Piedra 2- Papel 3- Tijeras");
             System.out.println("Elige: ");
