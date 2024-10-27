@@ -1,4 +1,5 @@
 import java.util.Scanner;
+<<<<<<< HEAD
 public class algo5 {
     public static void main(String[] args) {
         
@@ -6,6 +7,8 @@ public class algo5 {
 
 
 
+=======
+>>>>>>> 277e4d8f255500ef996737946cc54f275e0dbd01
 public class algo5 {
     public static void main(String[] args) {
         
@@ -19,7 +22,11 @@ public class algo5 {
             System.out.println("Fin del programa");
         }
 
+<<<<<<< HEAD
     }
     
+=======
+    }   
+>>>>>>> 277e4d8f255500ef996737946cc54f275e0dbd01
 }
 }
