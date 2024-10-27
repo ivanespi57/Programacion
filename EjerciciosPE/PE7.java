@@ -8,7 +8,7 @@ public class PE7 {
 
         int puntosJ = 0;
         int puntosO = 0;
-        int tryMaq = (int)(Math.random()*3+1);
+        int tryMaq = (int)(Math.random()*3);
         int tryYo;
         
         do{

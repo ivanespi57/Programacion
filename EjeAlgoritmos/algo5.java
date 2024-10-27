@@ -1,10 +1,10 @@
-<<<<<<< HEAD
+import java.util.Scanner;
 public class algo5 {
     public static void main(String[] args) {
         
         
-=======
-import java.util.Scanner;
+
+
 
 public class algo5 {
     public static void main(String[] args) {
@@ -17,8 +17,9 @@ public class algo5 {
 
         if (año == 0){
             System.out.println("Fin del programa");
-        }else if (año )
->>>>>>> 2e3da49968ca468fd32431a197d90ed27e6a2402
+        }
+
     }
     
+}
 }
