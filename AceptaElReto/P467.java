@@ -11,11 +11,11 @@ public class P467 {
         
         for (int i = 0; i < c; i++) {
             s = sc.nextLine();
-            String smin = s.toLowerCase();
             String[] separa = s.split(" ");
-            //if (separa[0].equals(separa[2])){
-              //  System.out.println("TAUTOLOGÍA");
-            //}
+            String smin = s.toLowerCase();
+            if (separa[0].equals(separa[2])){
+                System.out.println("TAUTOLOGÍA");
+            }
             
         }
 
