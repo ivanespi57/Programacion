@@ -21,7 +21,7 @@ public class Ej2 {
         int min = lista.getFirst();
         int max =  lista.getFirst();
 
-        for (Integer x : lista) { // suma 
+        for (Integer x : lista) { // suma, max y min
             suma += x;   
             if (x < min){
                 min = x;
