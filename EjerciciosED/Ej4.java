@@ -17,15 +17,15 @@ public class Ej4 {
         System.out.println("BINGO");
         System.out.println("Estos son los números cantados: ");
 
-        while (lista.size() > 0){   
+        while (lista.size() > 0){   // para comprobar si tiene los números la lista 
             System.out.println("Pulsa 0 y luego Enter para mostrar el siguiente número: ");
             sig = sc.nextInt();
             
             if (sig == 0){
-                aleatorio = (int) ((Math.random() * lista.size()));
-                numeros = lista.get(aleatorio);
+                aleatorio = (int) ((Math.random() * lista.size())); // número aleatorio dentro de la lista
+                numeros = lista.get(aleatorio); // cogemos ese número
     
-                System.out.println("¡" + numeros + "!");
+                System.out.println("¡" + numeros + "!"); 
     
                 lista.remove(aleatorio); // para borrar el número de la lista
             }else{
