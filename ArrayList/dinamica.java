@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class dinamica {
     public static void main(String[] args) {
@@ -7,7 +8,7 @@ public class dinamica {
         ArrayList<String> diasSemana = new ArrayList<String>(); // El segundo String no hace falta
         ArrayList<Integer> numeros = new ArrayList<Integer>(); // El segundo Integer no hace falta
 
-        String s = "7";
+        // String s = "7";
 
         //diasSemana.add(s);
 
@@ -28,5 +29,13 @@ public class dinamica {
         for (int i = 0; i < numeros.size(); i++) {
             System.out.println(numeros.get(i));    
         }
+        
+        Collections.sort(diasSemana); // ordenar por orden alfabetico los dias de la semana 
+        
+        for (String s : diasSemana) {
+            System.out.println(s);
+        }
+
+        
     }
 }
