@@ -21,6 +21,7 @@ public class String1 {
             System.out.println("Has perdido");
         }
         */
+        // s.contains("666"); Si contiene lo que le digas devuelve true, si no false
 
         System.out.println(s=s.toUpperCase()); // Para imprimir todo en mayúsculas, pero esto no lo guarda, solo la imprime. 
         // para guardarla sería sin el sout | si pones toLowerCase en minúscula
