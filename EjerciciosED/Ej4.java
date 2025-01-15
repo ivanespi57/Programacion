@@ -29,7 +29,7 @@ public class Ej4 {
     
                 lista.remove(aleatorio); // para borrar el número de la lista
             }else{
-                System.out.println("Ese  no es el 0, intentalo otra vez!");
+                System.out.println("Ese no es el 0, intentalo otra vez!");
             }
         }
         

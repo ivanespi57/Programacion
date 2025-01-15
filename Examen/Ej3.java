@@ -18,13 +18,34 @@ public class Ej3 {
 
         int casos;
         int can;
-        int t;
-
+        String t;
+        int[] canalestv = new int[11];
         casos = sc.nextInt();
-
+        int total = 0;
+        int minsTotales = 0;
+        
         for (int i = 0; i < casos; i++) {
             can = sc.nextInt();
-            t = sc.nextInt();
+            t = sc.nextLine();
+            String min = sc.next();
+
+            int m = minutos(min);
+
+            canalestv[can] += m;
+
+            minsTotales += m;
+
         }
+        int cadenaMasVista = 0;
+        int minutosCadenasMasVista = 0;
+
+        for (int i = 1; i <= 10; i++) {
+            if (canalestv[i] > minutosCadenasMasVista)
+                cadenaMasVista = i;
+                minutosCadenasMasVista = canalestv[i];
+        }
+        int cuotapantalla = (minutosCadenasMasVista * 100) / minsTotales;
+
+        System.out.println(cadenaMasVista + " " + cuotapantalla);
     }
 }
