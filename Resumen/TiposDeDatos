@@ -1,0 +1,68 @@
+**Resumen: Introducción a Java**
+
+### Tipos de Datos en Java
+
+Java es un lenguaje de programación de tipado estático, lo que significa que los tipos de datos deben ser declarados antes de su uso. Estos tipos de datos se dividen en:
+
+#### 1. **Tipos de Datos Primitivos**
+
+Son los tipos de datos básicos incorporados en el lenguaje Java. Se utilizan para almacenar valores simples:
+
+- **byte**: Almacena números enteros pequeños.
+
+  - Uso: Ideal para ahorrar memoria en grandes arrays.
+
+- **short**: Almacena enteros más grandes que el tipo byte.
+
+  - Uso: Datos numéricos donde no se requiere un rango extenso.
+
+- **int**: Almacena números enteros.
+
+  - Uso: Valores enteros genéricos.
+
+- **long**: Almacena enteros grandes.
+
+  - Uso: Números enteros muy grandes, como identificadores únicos.
+
+- **float**: Almacena números decimales de precisión simple.
+
+  - Uso: Valores con decimales donde no se requiere alta precisión.
+
+- **double**: Almacena números decimales de precisión doble.
+
+  - Uso: Cálculos matemáticos y científicos.
+
+- **char**: Almacena un solo carácter Unicode.
+
+  - Uso: Almacenar caracteres individuales como 'a', '1', o '@'.
+
+- **boolean**: Representa valores lógicos.
+
+  - Valores posibles: `true` o `false`.
+  - Uso: Condiciones lógicas.
+
+#### 2. **Tipos de Datos No Primitivos (Referenciados)**
+
+Son objetos o estructuras de datos más complejas:
+
+- **String**: Almacena una secuencia de caracteres.
+
+  - Uso: Representar texto.
+  - Ejemplo: `String saludo = "Hola Mundo";`
+
+- **Arrays**: Estructura que almacena un conjunto de elementos del mismo tipo.
+
+  - Uso: Colección fija de valores.
+  - Ejemplo: `int[] numeros = {1, 2, 3};`
+
+
+#### 3. **Conversión de Tipos**
+
+- **Implícita**: Cuando un tipo más pequeño se asigna a uno más grande.
+
+  - Ejemplo: `int a = 10; long b = a;`
+
+- **Explícita (Casting)**: Cuando se asigna un tipo más grande a uno más pequeño.
+
+  - Ejemplo: `long a = 100L; int b = (int) a;`
+

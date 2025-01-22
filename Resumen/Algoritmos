@@ -1,0 +1,182 @@
+### Algoritmos: Condicionales y Bucles
+
+En Java, los algoritmos se construyen con estructuras de control que permiten tomar decisiones (condicionales) y repetir acciones (bucles):
+
+#### 1. **Condicionales (if-else)**
+
+- Permiten ejecutar código dependiendo de si una condición es verdadera o falsa.
+
+  **Sintaxis:**
+  ```java
+  if (condicion) {
+      // Código si la condición es verdadera
+  } else {
+      // Código si la condición es falsa
+  }
+  ```
+  **Ejemplo:**
+  ```java
+  int numero = 5;
+  if (numero > 0) {
+      System.out.println("El número es positivo.");
+  } else {
+      System.out.println("El número no es positivo.");
+  }
+  ```
+
+#### 2. **Bucle for**
+
+- Se utiliza para repetir un bloque de código un número determinado de veces.
+
+  **Sintaxis:**
+  ```java
+  for (inicializacion; condicion; actualizacion) {
+      // Código a repetir
+  }
+  ```
+  **Ejemplo:**
+  ```java
+  for (int i = 0; i < 5; i++) {
+      System.out.println("Iteración: " + i);
+  }
+  ```
+
+#### 3. **Bucle while**
+
+- Repite un bloque de código mientras una condición sea verdadera.
+
+  **Sintaxis:**
+  ```java
+  while (condicion) {
+      // Código a repetir
+  }
+  ```
+  **Ejemplo:**
+  ```java
+  int contador = 0;
+  while (contador < 5) {
+      System.out.println("Contador: " + contador);
+      contador++;
+  }
+  ```
+
+#### 4. **Bucle do-while**
+
+- Similar al while, pero garantiza que el bloque de código se ejecute al menos una vez.
+
+  **Sintaxis:**
+  ```java
+  do {
+      // Código a ejecutar
+  } while (condicion);
+  ```
+  **Ejemplo:**
+  ```java
+  int numero = 0;
+  do {
+      System.out.println("Número: " + numero);
+      numero++;
+  } while (numero < 3);
+  ```
+
+### Ejercicios Resueltos
+
+1. **Ordenar tres números y detectar iguales:**
+
+   ```java
+   import java.util.Scanner;
+
+   public class OrdenarNumeros {
+       public static void main(String[] args) {
+           Scanner scanner = new Scanner(System.in);
+
+           System.out.println("Introduce el primer número:");
+           int num1 = scanner.nextInt();
+
+           System.out.println("Introduce el segundo número:");
+           int num2 = scanner.nextInt();
+
+           System.out.println("Introduce el tercer número:");
+           int num3 = scanner.nextInt();
+
+           if (num1 == num2 && num2 == num3) {
+               System.out.println("Hay tres iguales.");
+           } else if (num1 == num2 || num2 == num3 || num1 == num3) {
+               System.out.println("Hay dos iguales.");
+           }
+
+           if (num1 >= num2 && num1 >= num3) {
+               if (num2 >= num3) {
+                   System.out.println("Ordenados: " + num1 + ", " + num2 + ", " + num3);
+               } else {
+                   System.out.println("Ordenados: " + num1 + ", " + num3 + ", " + num2);
+               }
+           } else if (num2 >= num1 && num2 >= num3) {
+               if (num1 >= num3) {
+                   System.out.println("Ordenados: " + num2 + ", " + num1 + ", " + num3);
+               } else {
+                   System.out.println("Ordenados: " + num2 + ", " + num3 + ", " + num1);
+               }
+           } else {
+               if (num1 >= num2) {
+                   System.out.println("Ordenados: " + num3 + ", " + num1 + ", " + num2);
+               } else {
+                   System.out.println("Ordenados: " + num3 + ", " + num2 + ", " + num1);
+               }
+           }
+       }
+   }
+   ```
+
+2. **Determinar si puedes acceder a un ciclo formativo de grado superior:**
+
+   ```java
+   import java.util.Scanner;
+
+   public class AccesoCiclo {
+       public static void main(String[] args) {
+           Scanner scanner = new Scanner(System.in);
+
+           System.out.println("¿Tienes título de Bachiller o equivalente? (true/false): ");
+           boolean tieneBachiller = scanner.nextBoolean();
+
+           System.out.println("¿Has aprobado la prueba de acceso a grado superior? (true/false): ");
+           boolean pruebaAprobada = scanner.nextBoolean();
+
+           if (tieneBachiller || pruebaAprobada) {
+               System.out.println("Puedes acceder al ciclo formativo de grado superior.");
+           } else {
+               System.out.println("No puedes acceder al ciclo formativo de grado superior.");
+           }
+       }
+   }
+   ```
+
+3. **Calcular la media de n números ingresados por teclado:**
+
+   ```java
+   import java.util.Scanner;
+
+   public class CalcularMedia {
+       public static void main(String[] args) {
+           Scanner scanner = new Scanner(System.in);
+
+           System.out.println("¿Cuántos números vas a ingresar?");
+           int n = scanner.nextInt();
+
+           double suma = 0;
+           for (int i = 0; i < n; i++) {
+               System.out.println("Introduce un número:");
+               suma += scanner.nextDouble();
+           }
+
+           double media = suma / n;
+           System.out.println("La media es: " + media);
+       }
+   }
+   ```
+
+4. **Acepta el reto nº247:**
+
+   (Accede a los retos de programación de la página [Acepta el Reto](https://www.aceptaelreto.com/) y resuelve el problema 247 relacionado con programación básica.)
+
