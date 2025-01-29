@@ -16,19 +16,10 @@ public class PruebaMesa {
 
         reserva = bar[3].reservarMesa();
         
-        
-        
-        
-        
+                
         /*  Mesa mesaCocina = new Mesa("libre", "gris", "Cristal", 4, "grande", "150x70cm");
         Mesa mesaEstudio = new Mesa("ocupada", "marron", "Madera", 2, "mediano", "70x40cm");
-
-        
-        
-        
-        
-        
-        
+ 
         if (mesaCocina.estado.equals("libre")){
             System.out.println("La mesa de la cocina esta libre para comer");
         }
