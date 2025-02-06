@@ -6,24 +6,26 @@ public class Pizza {
     private static Integer TotalServidas = 0;
 
     public Pizza(){
-        setTipo("margarita");
-        setTamanyo("mediana");
+        this.tipo = "margarita";
+        this.tamanyo = "mediana";
+        this.estado = "pedida";
+        TotalPedidas++;
     }
 
     public Pizza(String tipo, String tamanyo){
         this.tipo = tipo;
         this.tamanyo = tamanyo;
-        this.estado = "Pedida";
+        this.estado = "pedida";
         TotalPedidas++;
     }
 
     public void sirve(){
 
-        if (this.estado.equals("Servida")){
+        if (this.estado.equals("servida")){
             
             System.out.println("Esta pizza ya se ha servido");
         }else{
-            setEstado("Servida");
+            setEstado("servida");
             TotalServidas++;
         }
         
@@ -69,4 +71,7 @@ public class Pizza {
         TotalServidas = totalServidas;
     }
 
+    public String toString(){
+        return "pizza" + " " + tipo + " " + tamanyo + ", " + estado;
+    }
 }
