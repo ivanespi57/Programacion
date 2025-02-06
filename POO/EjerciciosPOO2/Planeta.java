@@ -1,20 +1,21 @@
 public class Planeta {
-    private Double masa;
+    private Long masa;
     private Double diametro;
     private String nombre;
+    private Integer nSatelites;
 
     public Planeta(){}
 
-    public Double getMasa() {
-        return this.masa;
+    public Long getMasa() {
+        return masa;
     }
 
-    public void setMasa(Double masa) {
+    public void setMasa(Long masa) {
         this.masa = masa;
     }
 
     public Double getDiametro() {
-        return this.diametro;
+        return diametro;
     }
 
     public void setDiametro(Double diametro) {
@@ -22,20 +23,25 @@ public class Planeta {
     }
 
     public String getNombre() {
-        return this.nombre;
+        return nombre;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public Planeta(String nombre, double masa, double diametro){
+    public Integer getnSatelites() {
+        return nSatelites;
+    }
+
+    public void setnSatelites(Integer nSatelites) {
+        this.nSatelites = nSatelites;
+    }
+
+    public Planeta(String nombre, Long masa, double diametro){
         this.nombre = nombre;
         this.masa = masa;
         this.diametro = diametro;
-    }
-
-    public Integer nSatelites(){
-
+        this.nSatelites = 0;
     }
 }
