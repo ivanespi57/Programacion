@@ -1,4 +1,4 @@
-public class Incidencia {
+public class Incidencia implements Comparable<Incidencia>{
     private Integer codigo;
     private String estado;
     private static Integer pendientes = 0;
@@ -6,14 +6,16 @@ public class Incidencia {
     private Integer puesto;
     private String solucion;
     private static Integer incidencia = 1;
+    private Integer prioridad;
 
    
-    public Incidencia(Integer puesto, String causa){
+    public Incidencia(Integer puesto, String causa, Integer prioridad){
         this.codigo = incidencia++;
         this.puesto = puesto;
         this.causa = causa;
         this.estado = "pendiente";
         pendientes++;
+        this.prioridad = prioridad;
     }
 
     public void resuelve(String solucion){
@@ -24,6 +26,11 @@ public class Incidencia {
             setEstado("resuelta");
             pendientes--;
         }
+    }
+
+    public int compareTo(Incidencia inc){
+        
+        return (this.prioridad - inc.prioridad);
     }
 
     public Integer getCodigo() {
