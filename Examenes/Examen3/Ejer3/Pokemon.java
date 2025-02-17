@@ -55,18 +55,18 @@ public class Pokemon implements Comparable<Pokemon>{
     }
 
     public void ataquePokemon(Pokemon p){
-        int n = (int)(Math.random() * 3) +1;
-        int daño;
+        int n = 1;
+        //int daño;
         if(this.experiencia > p.experiencia){
-            daño = p.vida - n;     
-            if (0 > daño){
-                p.vida = 0;
-            }
+            n = (int)(Math.random() * 3) +1;
+        }
+        
+        // Esto es lo mismo de abajo - p.setVida(Math.max(p.getVida()-n,0));
+
+        if (p.getVida()-n >= 0){
+            p.setVida(p.getVida()-n);
         }else{
-            daño = p.vida - 1;
-            if(0 > daño){
-                p.vida = 0;
-            }
+            p.setVida(0);
         }
     }
 
