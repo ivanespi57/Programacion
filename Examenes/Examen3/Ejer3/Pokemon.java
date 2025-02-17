@@ -71,12 +71,21 @@ public class Pokemon implements Comparable<Pokemon>{
     }
 
     public int compareTo(Pokemon p){
-        if (this.experiencia != p.experiencia){
+        /*if (this.experiencia != p.experiencia){
             return (p.experiencia - this.experiencia);
         }else{
             return (this.experiencia - p.experiencia);
+        }*/
+        if (this.experiencia > p.experiencia){
+            return -1;
         }
-
+        if (this.experiencia < p.experiencia){
+            return 1;
+        }
+        return 0;
+        
+        // Con esto basta - return (p.experiencia - this.experiencia);
+         
     }
 
     public String toString(){
