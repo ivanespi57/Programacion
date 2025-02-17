@@ -2,6 +2,8 @@ public class Generacion {
     private Integer ngen;
     private String nombregen;
 
+    public Generacion(){}
+
     public Generacion(Integer ngen, String nombregen){
         this.ngen = ngen;
         this.nombregen = nombregen;

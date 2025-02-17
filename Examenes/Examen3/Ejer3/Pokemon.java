@@ -4,7 +4,7 @@ public class Pokemon implements Comparable<Pokemon>{
     private String tipo;
     private Integer vida;
     private Integer experiencia;
-    private Generacion generacion;
+    private Generacion generacion = new Generacion();
 
     
 
