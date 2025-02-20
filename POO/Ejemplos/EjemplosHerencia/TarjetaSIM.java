@@ -12,6 +12,6 @@ public class TarjetaSIM {
     }
 
     public void llama(TarjetaSIM t, Integer s){
-        //añadir segundos a las dos TarjetaSIM
+        //añadir segundos a las dos TarjetaS
     }
 }
