@@ -29,7 +29,7 @@ public class Ej2 {
                     if (recompensa == max_recomp) {
                         
                         if (punteria < max_punt){
-                            
+                            System.out.println(nombre);
                         }
                     }
                 }
