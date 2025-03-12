@@ -43,18 +43,26 @@ public class PruebaVehiculo {
                     coche.add(c1);
                     break;
                 case 3 :
-                    int andar = (int)(Math.random() * 10 +1);
-                    int bicicleta = (int)(Math.random()* bici.size());
-                    bici.get(bicicleta).anda(andar);
+                    int posb = (int)(Math.random()* bici.size());
+                    double andar = (int)(Math.random() * 10 +1);
+                    bici.get(posb).anda(andar);
                     break;
                 case 4 :
-                    c1.anda(Math.random()*80 + 1);
+                    int posc = (int)(Math.random()* bici.size());
+                    double andarc = (int)(Math.random() * 10 +1);
+                    bici.get(posc).anda(andarc);
                     break;
                 case 5 :
-                    System.out.println("Estos son los kilómetros de la bici: " + b1.getKilometrosRecorridos());
+                    System.out.println("KM BICIS");
+                    for (Bicicleta b : bici) {
+                        System.out.println("Km: "+ b.getKilometrosRecorridos());
+                    }
                     break;
                 case 6 :
-                    System.out.println("Estos son los kilómetros del coche: " + c1.getKilometrosRecorridos());
+                System.out.println("KM BICIS");
+                    for (Coche c : coche) {
+                        System.out.println("Km: "+ c.getKilometrosRecorridos());
+                    }
                     break;
                 case 7 :
                     System.out.println("Estos son los kilómetros totales: "+ Vehiculo.getKilometrosTotales());
@@ -69,7 +77,7 @@ public class PruebaVehiculo {
                     System.out.println("Opción incorrecta");
             }
 
-        }while(n != 7);
+        }while(n != 9);
         
     
     }
