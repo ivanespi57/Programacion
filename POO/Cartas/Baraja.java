@@ -3,6 +3,7 @@ import java.util.Collections;
 
 public class Baraja {
     private ArrayList<Carta> cartas = new ArrayList<>();
+    private ArrayList<String> palos = new ArrayList<>();
 
     public Baraja(int numeros){
         for (int i = 1; i <= numeros; i++) {

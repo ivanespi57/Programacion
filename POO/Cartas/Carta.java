@@ -24,6 +24,6 @@ public class Carta {
     }
 
     public String toString(){
-        return "Carta: " + this.valor + " de " + this.palo;
+        return this.valor + " de " + this.palo;
     }
 }
