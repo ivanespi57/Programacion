@@ -30,7 +30,7 @@ public class F {
                 }                
             }
 
-            if(cadena.length() / 2 < mayor){
+            if((cadena.length()+1) / 2 + 1 > mayor){
                 System.out.println("SI");
             }else{
                 System.out.println("NO");
