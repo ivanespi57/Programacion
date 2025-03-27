@@ -14,6 +14,7 @@ public class A {
                 System.out.println("Bien");
             }else{
                 System.out.println("Mal");
+                
             }
         }
     }
