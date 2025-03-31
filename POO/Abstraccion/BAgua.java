@@ -8,4 +8,7 @@ public class BAgua extends Bloque{
         super(alto,ancho,profundo,color);
     }
 
+    public void colocar(){
+        
+    }
 }
