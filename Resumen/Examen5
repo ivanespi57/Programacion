@@ -65,6 +65,7 @@ public class MundoMinecraft {
 
 public class Objeto {
     private String nombre;
+    private String valor;
 
     public Objeto(String nombre) {
         this.nombre = nombre;
