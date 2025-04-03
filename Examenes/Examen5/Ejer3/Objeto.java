@@ -1,11 +1,11 @@
 public abstract class Objeto {
-    private String nombre;
+    protected String nombre;
 
     public String getNombre() {
         return nombre;
     }
 
-    private Integer valor;
+    protected Integer valor;
 
     public Objeto(){
         this.nombre = eligeNombre();

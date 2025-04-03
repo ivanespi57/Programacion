@@ -25,15 +25,15 @@ public class Cofre {
             objetos.add(new Herramienta());
         }
 
-        for (int i = 0; i < h; i++) {
+        for (int i = 0; i < a; i++) {
             objetos.add(new Armadura());
         }
 
-        for (int i = 0; i < h; i++) {
+        for (int i = 0; i < c; i++) {
             objetos.add(new Comida());
         }
 
-        for (int i = 0; i < h; i++) {
+        for (int i = 0; i < m; i++) {
             objetos.add(new Mineral());
         }
     }

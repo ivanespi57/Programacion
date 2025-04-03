@@ -35,19 +35,4 @@ public class Herramienta extends Objeto {
         return desgaste;
     }
 
-    public ArrayList<String> getH() {
-        return h;
-    }
-
-    public void setH(ArrayList<String> h) {
-        this.h = h;
-    }
-
-    public Integer getDesgaste() {
-        return desgaste;
-    }
-
-    public void setDesgaste(Integer desgaste) {
-        this.desgaste = desgaste;
-    }
 }
