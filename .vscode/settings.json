@@ -1,0 +1,32 @@
+{
+    "java.project.sourcePaths": [
+        "AceptaElReto",
+        "Arrays",
+        "BBDD",
+        "CalentamientoProgramame",
+        "Dinamica/Hashmap",
+        "EjeAlgoritmos",
+        "EjerciciosAmpliados",
+        "EjerciciosAvanzados",
+        "EjerciciosBasicos",
+        "EjerciciosED",
+        "EjerciciosExamen",
+        "EjerciciosPExtra",
+        "EstructuraModular",
+        "Examenes/Examen5",
+        "Excepciones/Ejemplos",
+        "GestionFicheros/Ejemplos",
+        "Libreria",
+        "LibreriaCompleta",
+        "POO/EjerciciosPOO+",
+        "PracticaExamen",
+        "PracticaSecue",
+        "ProgMod",
+        "Programame",
+        "Prueba",
+        "PruebaString"
+    ],
+    "java.project.referencedLibraries": [
+        "BBDD/lib/mysql-connector-j-9.2.0.jar"
+    ]
+}
