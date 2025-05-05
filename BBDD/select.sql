@@ -1,2 +1,2 @@
-USE contactos;
-SELECT * FROM contacto;
+USE ReservaVuelos;
+SELECT * FROM Vuelos;
