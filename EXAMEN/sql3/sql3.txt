@@ -1,0 +1,72 @@
+import java.sql.*;
+
+public class sql3 {
+
+    private static final String URL = "jdbc:mysql://localhost:3306/FaltasDAW";
+    private static final String USER = "root";
+    private static final String PASSWORD = ""; // Ajusta si tu contraseña es distinta
+
+    public static Connection conectar() throws SQLException {
+        return DriverManager.getConnection(URL, USER, PASSWORD);
+    }
+
+    public static void insertarAlumno(String nia, String nombre, int edad) {
+        String sql = "INSERT INTO Alumnos (NIA, Nombre, Edad) VALUES (?, ?, ?)";
+        try (Connection conn = conectar(); PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, nia);
+            stmt.setString(2, nombre);
+            stmt.setInt(3, edad);
+            stmt.executeUpdate();
+            System.out.println("Alumno insertado correctamente.");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void borrarAlumno(int numAlumno) {
+        String sql = "DELETE FROM Alumnos WHERE NumAlumno = ?";
+        try (Connection conn = conectar(); PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, numAlumno);
+            stmt.executeUpdate();
+            System.out.println("Alumno eliminado correctamente.");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void registrarFalta(int numAlumno, String idSesion) {
+        String sql = "INSERT INTO Faltas (NumAlumno, IdSesion) VALUES (?, ?)";
+        try (Connection conn = conectar(); PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, numAlumno);
+            stmt.setString(2, idSesion);
+            stmt.executeUpdate();
+            System.out.println("Falta registrada correctamente.");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void listarFaltasAlumno(int numAlumno) {
+        String sql = "SELECT f.IdSesion, s.Modulo FROM Faltas f JOIN Sesiones s ON f.IdSesion = s.IdSesion WHERE f.NumAlumno = ?";
+        try (Connection conn = conectar(); PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, numAlumno);
+            ResultSet rs = stmt.executeQuery();
+            System.out.println("Faltas del alumno " + numAlumno + ":");
+            while (rs.next()) {
+                String idSesion = rs.getString("IdSesion");
+                String modulo = rs.getString("Modulo");
+                System.out.println("- " + idSesion + " (" + modulo + ")");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+        // Ejemplo de uso:
+        insertarAlumno("99999999", "Juan Prueba", 20);
+        registrarFalta(1, "050711");
+        listarFaltasAlumno(1);
+        borrarAlumno(5);
+    }
+}

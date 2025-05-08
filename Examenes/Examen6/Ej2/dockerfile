@@ -1,0 +1,20 @@
+# Imagen base con Python
+FROM python:3.11-slim
+# Crear un usuario y un grupo
+RUN addgroup --system appgroup
+RUN adduser --system --ingroup appgroup appuser
+# Crear directorio de trabajo y dar permisos al nuevo usuario
+WORKDIR /app
+RUN chown appuser:appgroup /app
+# Copiar archivos de la aplicación
+COPY requirements.txt .
+COPY config.md .
+RUN pip install --no-cache-dir -r requirements.txt
+# Cambiar propietario de todos los archivos copiados
+RUN chown -R appuser:appgroup /app
+# Cambiar a usuario no root
+USER appuser
+# Exponer puerto
+EXPOSE 8000
+# Ejecutar la app
+CMD ["python", "app.py"]

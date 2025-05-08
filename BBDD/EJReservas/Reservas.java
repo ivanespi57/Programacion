@@ -1,6 +1,7 @@
+
 import java.sql.*;
 import java.util.*;
-//import java.util.Scanner;
+import java.util.Scanner;
 
 public class Reservas {
     
@@ -173,7 +174,7 @@ public class Reservas {
                 }
             } while (n != 6);
 
-            con.close();
+            
         } catch (SQLException e) {
             System.out.println("Error en la conexión");
             e.printStackTrace();
